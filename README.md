@@ -1,4 +1,4 @@
-# Esta landing fue creada con la tecnologia Astro
+# Esta landing Page fue creada con la tecnologia Astro
 
 ## Proyecto consumiendo la API de SpaceX 🚀
 
