@@ -4,7 +4,7 @@ import { getLatestLaunches, getLaunchBy } from "../../services/spacex"
 import Layout from "../../layouts/Layout.astro";
 
   const {id}= Astro.params
-  let launch = null
+  let launch
   if(id){
    launch = await getLaunchBy({id})
   }
