@@ -7,7 +7,7 @@ export const getLaunchBy = async ({id}: {id: string})=>{
   const launch = await res.json() as Doc
   console.log(launch)
   return launch
-
+  
 }
 
 
