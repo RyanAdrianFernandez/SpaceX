@@ -9,7 +9,7 @@ import Layout from "../../layouts/Layout.astro";
    launch = await getLaunchBy({id})
   }
 
-  export async function GetStaticPaths() {
+  export async function getStaticPaths() {
     const launches = await getLatestLaunches()
 
     return launches.map(launch=>({
