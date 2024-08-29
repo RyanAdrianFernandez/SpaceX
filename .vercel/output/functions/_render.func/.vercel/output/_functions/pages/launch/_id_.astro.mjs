@@ -1,13 +1,12 @@
 /* empty css                                    */
-import { c as createComponent, r as renderTemplate, a as renderComponent, b as createAstro, m as maybeRenderHead, d as addAttribute } from '../../chunks/astro/server_CIrWgrVV.mjs';
+import { c as createComponent, r as renderTemplate, a as renderComponent, b as createAstro, m as maybeRenderHead, d as addAttribute } from '../../chunks/astro/server_CSAqAdTi.mjs';
 import 'kleur/colors';
 import { g as getLaunchBy, a as getLatestLaunches } from '../../chunks/spacex_C05eruYN.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_LMzUNJeQ.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_LkJ9ZjdF.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();
-const prerender = false;
-async function getStaticPaths() {
+async function GetStaticPaths() {
   const launches = await getLatestLaunches();
   return launches.map((launch) => ({
     params: { id: launch.id }
@@ -30,10 +29,9 @@ const $$url = "/launch/[id]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
+  GetStaticPaths,
   default: $$id,
   file: $$file,
-  getStaticPaths,
-  prerender,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
