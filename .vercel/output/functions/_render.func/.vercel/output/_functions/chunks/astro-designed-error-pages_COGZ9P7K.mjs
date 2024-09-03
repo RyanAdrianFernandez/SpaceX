@@ -1,6 +1,6 @@
 import { parse } from 'devalue';
 import { escape } from 'html-escaper';
-import { D as DEFAULT_404_COMPONENT } from './astro/server_CSAqAdTi.mjs';
+import { D as DEFAULT_404_COMPONENT } from './astro/server_CIrWgrVV.mjs';
 
 const ACTION_QUERY_PARAMS = {
   actionName: "_astroAction",
@@ -96,22 +96,10 @@ function getActionQueryString(name) {
 }
 function deserializeActionResult(res) {
   if (res.type === "error") {
-    let json;
-    try {
-      json = JSON.parse(res.body);
-    } catch {
-      return {
-        data: void 0,
-        error: new ActionError({
-          message: res.body,
-          code: "INTERNAL_SERVER_ERROR"
-        })
-      };
-    }
     if (Object.assign(__vite_import_meta_env__, { OS: process.env.OS, _: process.env._ })?.PROD) {
-      return { error: ActionError.fromJson(json), data: void 0 };
+      return { error: ActionError.fromJson(JSON.parse(res.body)), data: void 0 };
     } else {
-      const error = ActionError.fromJson(json);
+      const error = ActionError.fromJson(JSON.parse(res.body));
       error.stack = actionResultErrorStack.get();
       return {
         error,

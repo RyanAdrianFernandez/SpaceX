@@ -1,12 +1,12 @@
 /* empty css                                    */
-import { c as createComponent, r as renderTemplate, a as renderComponent, b as createAstro, m as maybeRenderHead, d as addAttribute } from '../../chunks/astro/server_CSAqAdTi.mjs';
+import { c as createComponent, r as renderTemplate, a as renderComponent, b as createAstro, m as maybeRenderHead, d as addAttribute } from '../../chunks/astro/server_CIrWgrVV.mjs';
 import 'kleur/colors';
-import { g as getLaunchBy, a as getLatestLaunches } from '../../chunks/spacex_C05eruYN.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_LkJ9ZjdF.mjs';
+import { g as getLaunchBy, a as getLatestLaunches } from '../../chunks/spacex_CqHRMX3l.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_LMzUNJeQ.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();
-async function GetStaticPaths() {
+async function getStaticPaths() {
   const launches = await getLatestLaunches();
   return launches.map((launch) => ({
     params: { id: launch.id }
@@ -29,9 +29,9 @@ const $$url = "/launch/[id]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  GetStaticPaths,
   default: $$id,
   file: $$file,
+  getStaticPaths,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
